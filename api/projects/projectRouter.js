@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const projectModel = require('../data/helpers/projectModel.js'); //check path
+const projectModel = require('../../data/helpers/projectModel.js'); //check path
 const Actions = require('../../data/helpers/actionModel.js');  // check path
 
 const { checkProjectId, bodyValidation } = require('./validation-middleware.js'); // validation middle-ware insertion point
