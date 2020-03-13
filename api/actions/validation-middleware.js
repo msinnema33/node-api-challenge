@@ -3,7 +3,7 @@ module.exports = {
     bodyValidation
 };
 
-const Actions = require('../data/helpers/actionModel.js'); //need to check path
+const Actions = require('../../data/helpers/actionModel.js'); //need to check path
 
 function checkActionId(req, res, next) {
     const { id } = req.params
