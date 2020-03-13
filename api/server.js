@@ -3,7 +3,7 @@ const cors = require('cors');
 const helmet = require('helmet');
 
 const ProjectRouter = require('./projects/projectRouter');
-const ActionRouter = require('../actions/actionRouter');
+const ActionRouter = require('./actions/actionRouter');
 
 const server = express();
 
