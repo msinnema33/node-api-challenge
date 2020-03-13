@@ -38,15 +38,31 @@ Commit your code regularly and use descriptive messages. This helps both you (in
 
 Demonstrate your understanding of this Sprint's concepts by answering the following free-form questions. Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your Team Lead.
 
-- [ ] Mention two parts of Express that you learned about this week.
+- [x] Mention two parts of Express that you learned about this week.
 
-- [ ] Describe Middleware?
+        A light unopinionated framework used by Node.js 
 
-- [ ] Describe a Resource?
+        Adds additional functionality like routing and middleware support. 
 
-- [ ] What can the API return to help clients know if a request was successful?
+- [x] Describe Middleware?
 
-- [ ] How can we partition our application into sub-applications?
+        Built-in w/ Express 
+
+        Third – party (morgan, cors, helmet) 
+
+        Custom (logger, validation) 
+
+- [x] Describe a Resource?
+
+        When used in the RESTful Web API context, everything is a resource, each resource is accessible from a unique URI, can have multiple representations, can be “talked to” via stateless protocol (HTTP/HTTPS) and are managed by HTTP methods. 
+
+- [x] What can the API return to help clients know if a request was successful?
+
+        Provide the correct HTTP status code and a clear concise success message. 
+
+- [x] How can we partition our application into sub-applications?
+
+        By using Express Routers to partition the application into smaller bite-sized mini-applications (all related to distinct functions/tasks) that make our code more modular, easier to maintain, and clarify our business logic. 
 
 ## Minimum Viable Product
 
