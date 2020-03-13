@@ -6,7 +6,7 @@ const Actions = require('../../data/helpers/actionModel.js');
 
 
 
-const { checkActionId } = require('./validation-middleware.js'); //add in validation usecases
+const { checkActionId, bodyVal } = require('./validation-middleware.js'); //add in validation usecases
 
 router.get('/', (req, res) => {
     Actions.get()
@@ -20,8 +20,8 @@ router.get('/:id', checkActionId, (req, res) => {
     res.status(200).json(req.action)
 })
 
-router.post('/', (req, res) => {
-    Actions.insert(body)
+router.post('/', bodyVal, (req, res) => {
+    Actions.insert(req.body)
     .then(action => res.status(201).json(action))
     .catch(err => res.status(500).json({ message: err}))
 })

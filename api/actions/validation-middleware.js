@@ -1,6 +1,6 @@
 module.exports = {
     checkActionId,
-    bodyValidation
+    bodyVal
 };
 
 const Actions = require('../../data/helpers/actionModel.js'); //need to check path
@@ -21,7 +21,7 @@ function checkActionId(req, res, next) {
      .catch(err => res.status(500).json({ message: "Failed to get the action from the database", error: err}))
 }
 
-function bodyValidation(req, res, next) {
+function bodyVal(req, res, next) {
     const { project_id, description, notes } = req.body;
 
     console.log("Action val middleware bodyVal req.body: ", JSON.stringify(req.body))
