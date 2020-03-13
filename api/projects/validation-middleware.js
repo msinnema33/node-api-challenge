@@ -3,7 +3,7 @@ module.exports = {
     bodyValidation
 };
 
-const Projects = require('../../data/helpers/projectModel.js'); //need to check path
+const Projects = require('../../data/helpers/projectModel.js'); 
 
 function checkProjectId(req, res, next) {
     const { id } = req.params

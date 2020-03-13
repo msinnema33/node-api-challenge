@@ -1,12 +1,10 @@
-//need to add validation checker usecases for projectId and actionBody
-// need to add validation middleware for both the above
 const express = require('express');
 const router = express.Router();
 const Actions = require('../../data/helpers/actionModel.js');
 
 
 
-const { checkActionId, bodyVal } = require('./validation-middleware.js'); //add in validation usecases
+const { checkActionId, bodyVal } = require('./validation-middleware.js'); 
 
 router.get('/', (req, res) => {
     Actions.get()
