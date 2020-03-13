@@ -37,7 +37,7 @@ router.post('/', bodyValidation, (req, res) => {
     projectModel.insert(req.body)
     .then(project => res.status(201).json(project))
     .catch(err => {
-        console.log("projectRouter POS 500 error:", err)
+        console.log("projectRouter POST 500 error:", err)
         res.status(500).json({ message: err})
     })
 })

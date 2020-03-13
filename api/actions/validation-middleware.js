@@ -22,13 +22,13 @@ function checkActionId(req, res, next) {
 }
 
 function bodyValidation(req, res, next) {
-    const { name, description } = req.body;
+    const { project_id, description, notes } = req.body;
 
     console.log("Action val middleware bodyVal req.body: ", JSON.stringify(req.body))
 
-    if(name && description) {
+    if(project_id && description && notes) {
         next()
     } else {
-        res.status(400).json({ message: 'Please add name and description'})
+        res.status(400).json({ message: 'Please add project ID, description, and notes'})
     }
 }
